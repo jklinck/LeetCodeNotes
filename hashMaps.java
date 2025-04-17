@@ -1,16 +1,21 @@
+import java.util.Map;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 class HashMaps{
 
       public static void main(String[] args) {
             
             // creates a hashmap
-            HashMap<Integer,Integer> map = new HashMap<>();
+            Map<Integer,Integer> map = new HashMap<>();
 
-            // creates and ordered hashmaps since hahsmaps are not 
+            // creates an ordered hashmap since hahsmaps are not 
             // necessarily ordered
-            LinkedHashMap<Integer,Integer> map2 = new LinkedHashMap<>();
+            Map<Integer,Integer> map2 = new LinkedHashMap<>();
 
             // creates a key of 5 with a value of 17
             map.put(5,17);
+            
             // creates a key of 6 with a value of 45
             map.put(6,45);
 
@@ -34,6 +39,22 @@ class HashMaps{
                   System.out.println(entry.getValue()); // prints the value
                   System.out.printf("%d: %d\n", entry.getKey(), entry.getValue()); // prints both
             }
+
+            Map<Character,Integer> firstMap = new HashMap<>();
+            String first = "aaabbb";
+           
+            for(int i = 0; i < first.length(); i++) {
+                  char currChar = first.charAt(i);
+                  /*
+                  the getOrDefault() method below either sets the currChar value to 
+                  0 if it doesn't have a value, or it adds 1 the value of currChar
+                  */
+                  firstMap.put(currChar, firstMap.getOrDefault(currChar, 0) + 1);
+            }
+
+            // returns a boolean that checks if the maps are equal
+            boolean check = map.equals(firstMap);
+
       }
 }
 

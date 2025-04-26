@@ -43,6 +43,10 @@ class Bitwise{
 		>>> Unsigned right shift
 		*/
 
+		
+                int num = 5;
+                // this will count how many 1 bits are in the binary
+                int numBits = Integer.bitCount(x);
 
 	}
 }

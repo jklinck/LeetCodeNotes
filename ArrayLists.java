@@ -7,8 +7,8 @@ class ArrayLists{
 
 		// creates an ArrayList of ArrayLists
 		List<List<Integer>> list = new ArrayList<>();
+		
 		// adds a new ArrayList of [1,2] in the outer list
-
 	    list.add(new ArrayList<>(Arrays.asList(1,2)));
 
 	    
